@@ -1,0 +1,7 @@
+- hosts: appdeploy 
+  gather_facts: false  
+  sudo: true  
+  tasks:  
+       - name: Deploy App    
+         copy: src=/var/lib/jenkins/workspace/mavenproject/webapp/target/webapp.war  dest="/opt/apache-tomcat-7.0.82/webapps/webapp##{{ buildnum }}.war" owner=tomcat group=tomcat
+
