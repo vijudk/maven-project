@@ -22,13 +22,11 @@
   </modules>
 
   <distributionManagement>
-    <distributionManagement>
-    <repository>
+        <repository>
         <id>central</id>
         <name>server100-releases</name>
         <url>https://server100.jfrog.io/server100/libs-release-local</url>
     </repository>
-</distributionManagement>
   </distributionManagement>
 
   <build>
