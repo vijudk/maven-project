@@ -1,4 +1,4 @@
 # maven-project
-learning jenkins
+learning jenkins CI
 
 
