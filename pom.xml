@@ -22,19 +22,6 @@
   </modules>
 
   
-  <distributionManagement>
-        <repository>
-        <id>releases</id>
-        <name>releases</name>
-        <url>http://54.184.37.112:8081/nexus/content/repositories/releases/</url>
-    </repository>
-        <snapshotRepository>
-        <id>snapshots</id>
-        <name>snapshots</name>
-        <url>http://54.184.37.112:8081/nexus/content/repositories/snapshots/</url>
-    </snapshotRepository>
-        </distributionManagement>
-
   <build>
     <plugins>
       <plugin>
@@ -222,5 +209,16 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-
+      <distributionManagement>
+        <repository>
+        <id>releases</id>
+        <name>releases</name>
+        <url>http://54.184.37.112:8081/nexus/content/repositories/releases/</url>
+    </repository>
+        <snapshotRepository>
+        <id>snapshots</id>
+        <name>snapshots</name>
+        <url>http://54.184.37.112:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+        </distributionManagement>
 </project>
