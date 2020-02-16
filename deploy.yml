@@ -16,8 +16,8 @@
               src: /opt/tomcat/apache-tomcat-7.0.100.tar.gz
               dest: /opt/tomcat
               copy: no
-     - name: Create tomcat users
-       copy: src=tomcat-users.xml dest=/opt/tomcat/apache-tomcat-7.0.100/conf
+    # - name: Create tomcat users
+    #   copy: src=tomcat-users.xml dest=/opt/tomcat/apache-tomcat-7.0.100/conf
      - name: Deploy sample application
        copy: src=/var/lib/jenkins/workspace/webproject/webapp/target/webapp.war dest=/opt/tomcat/apache-tomcat-7.0.100/webapps
 
