@@ -1,0 +1,27 @@
+---
+- hosts: appserver
+  become: true
+  tasks:
+     - name: Create tomcat directory
+     #  command: mkdir /usr/local/tomcat
+       file:
+           path: /opt/tomcat
+           state: directory
+     - name: Download Tomcat
+       get_url:
+             url: http://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.99/
+bin/apache-tomcat-7.0.99.tar.gz
+             dest: /opt/tomcat
+     - name: Extract tomcat
+       unarchive:
+              src: /opt/tomcat/apache-tomcat-7.0.99.tar.gz
+              dest: /opt/tomcat
+     - name: Create tomcat users
+       copy: src=tomcat-users.xml dest=/opt/tomcat/apache-tomcat-7.0.99/conf
+     - name: Deploy sample application
+       copy: src=/var/lib/jenkins/workspace/webproject/webapp/target/webapp.war dest=/opt/tomcat/apache-tomcat-7.0.99/webapps
+
+     - name: start tomcat
+       shell: nohup  /opt/tomcat/apache-tomcat-7.0.99/bin/catalina.sh start
+       register: result
+
