@@ -19,7 +19,7 @@
     # - name: Create tomcat users
     #   copy: src=tomcat-users.xml dest=/opt/tomcat/apache-tomcat-7.0.100/conf
      - name: Deploy sample application
-       copy: src=/var/lib/jenkins/workspace/webproject/webapp/target/webapp.war dest=/opt/tomcat/apache-tomcat-7.0.104/webapps
+       copy: src=/var/lib/jenkins/workspace/test2/webapp/target/webapp.war dest=/opt/tomcat/apache-tomcat-7.0.104/webapps
 
      - name: start tomcat
        shell: nohup  /opt/tomcat/apache-tomcat-7.0.104/bin/catalina.sh start
