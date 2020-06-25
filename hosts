@@ -1,2 +1,2 @@
 [appserver]
-server2.abc.com ansible_ssh_user=root ansible_ssh_pass=redhat
+server3.abc.com ansible_ssh_user=root ansible_ssh_pass=redhat
